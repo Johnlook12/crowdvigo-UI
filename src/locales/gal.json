@@ -1,0 +1,10 @@
+{
+    "login":{
+        "title": "Iniciar sesión",
+        "username": "Nome de usuario",
+        "password": "Contrasinal",
+        "loginButton": "Iniciar sesión",
+        "forgotPassword": "Esqueciches o teu contrasinal?",
+        "register": "Rexístrate"
+    }
+}

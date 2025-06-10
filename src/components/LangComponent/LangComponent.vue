@@ -1,5 +1,5 @@
 <template>
-    <div class="items-center flex relative mr-5">
+    <div class="items-center flex relative mr-5 z-100">
             <Listbox as="div" name="language" id="language" v-model="currentLanguage" class="text-xl font-semibold">
                 <ListboxButton class="flex items-center space-x-2 cursor-pointer hover:text-[#15a3b1]">
                     <span>{{ currentLanguage.toUpperCase() }}</span>

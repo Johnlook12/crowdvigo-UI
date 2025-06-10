@@ -1,5 +1,5 @@
 <template>
-    <div class="py-5 flex flex-row border-b border-[#e5e5e5]">
+    <div class="sticky top-0 z-50 bg-white py-5 flex flex-row border-b border-[#e5e5e5]">
         <div class="flex flex-row items-center justify-between w-full">
             <div class="ml-5 ">
                 <img class="w-50" src="/img/logo.svg" alt="crowdvigo logo">

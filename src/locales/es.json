@@ -1,10 +1,85 @@
 {
-    "login":{
+    "login": {
         "title": "Iniciar sesión",
         "username": "Nombre de usuario",
         "password": "Contraseña",
         "loginButton": "Iniciar sesión",
         "forgotPassword": "¿Olvidaste tu contraseña?",
-        "register": "Regístrate"
+        "rememberMe": "Recuérdame",
+        "register": "Regístrate",
+        "noAccount": "¿No tienes cuenta?"
+    },
+    "home": {
+        "welcome": {
+            "heading": "Bienvenido a crowdvigo",
+            "lead1": "Democratizar el acceso a oportunidades de inversión con alto potencial de rentabilidad, conectando proyectos innovadores con una comunidad de inversores comprometidos.",
+            "lead2": "Somos una plataforma tecnológica e innovadora donde emprendedores y financiadores convergen para presentar, apoyar y hacer crecer juntos sus proyectos. Aquí, cada idea encuentra su audiencia, y cada inversión impulsa el éxito compartido."
+        },
+        "callToAction": {
+            "registerButton": "Regístrate"
+        },
+        "about": {
+            "heading": "Somos crowfunding",
+            "body": "Somos Proveedores de Servicios de Financiación Participativa autorizado por la Comisión Nacional del Mercado de Valores (CNMV), con propuesta favorable del Banco de España, inscrito con número de registro 9. Somos transparentes y trabajamos con arreglo al mejor interés para nuestros clientes. Por favor, antes de invertir, infórmate de los riesgos y lee la Información Básica para el Cliente Inversor, así como el periodo de reflexión precontractual para inversores no experimentados. Consulta los informes financieros aquí."
+        },
+        "statistics": {
+            "averageReturn": {
+                "label": "Rentabilidad media",
+                "value": "14,6%"
+            },
+            "totalFunded": {
+                "label": "Financiado",
+                "value": "55 M€"
+            },
+            "averageTerm": {
+                "label": "Plazo medio",
+                "value": "3 meses"
+            },
+            "defaultRate": {
+                "label": "Tasa de impago",
+                "value": "0 %"
+            },
+            "successRate": {
+                "label": "Porcentaje de éxito",
+                "value": "85 %"
+            }
+        },
+        "opportunities": {
+            "heading": "Oportunidades para invertir"
+        },
+        "tariffs": {
+            "heading": "Nuestras tarifas",
+            "lead1": "Transparencia total: aquí encontrarás exactamente lo que pagarás… ¡y lo que no!",
+            "lead2": "Para ti, como inversor, es 100 % GRATIS. No cobramos nada por apoyar los proyectos que te inspiran.",
+            "investor": "A inversores",
+            "promoter": "A promotores",
+            "footnote": "Sin letra pequeña, sin sorpresas. Así es de sencillo: invierte a tu ritmo y deja que nosotros nos encarguemos del resto."
+        },
+        "commitment": {
+            "heading": "Nuestro compromiso contigo",
+            "body": "En nuestra plataforma, nos comprometemos a ofrecerte la mejor experiencia de inversión posible. Trabajamos arduamente para garantizar la transparencia y la seguridad en todas las transacciones.",
+            "button": "Quiero saber más"
+        }
+    },
+    "projectCard": {
+        "financedLabel": "financiado {percent}%",
+        "goalLabel": "Objetivo"
+    },
+    "footer": {
+        "brand": "crowdvigo",
+        "description": "Conectamos proyectos innovadores con inversores comprometidos. Transparencia, seguridad y compromiso en cada inversión.",
+        "usefulLinksTitle": "Enlaces útiles",
+        "links": {
+            "home": "Inicio",
+            "projects": "Proyectos",
+            "tariffs": "Tarifas",
+            "contact": "Contacto"
+        },
+        "contactTitle": "Contacto",
+        "emailLabel": "Email",
+        "email": "contacto@crowdvigo.com",
+        "phoneLabel": "Tel",
+        "phone": "+34 123 456 789",
+        "copyright": "© 2025 crowdvigo. Todos los derechos reservados."
     }
 }

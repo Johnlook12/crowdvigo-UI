@@ -1,10 +1,85 @@
 {
-    "login":{
-        "title": "Iniciar sesión",
-        "username": "Nome de usuario",
-        "password": "Contrasinal",
-        "loginButton": "Iniciar sesión",
-        "forgotPassword": "Esqueciches o teu contrasinal?",
-        "register": "Rexístrate"
+  "login": {
+    "title": "Iniciar sesión",
+    "username": "Nome de usuario",
+    "password": "Contrasinal",
+    "loginButton": "Iniciar sesión",
+    "forgotPassword": "Esqueciches o teu contrasinal?",
+    "rememberMe": "Lémbrame",
+    "register": "Rexístrate",
+    "noAccount": "Non tes conta?"
+  },
+  "home": {
+    "welcome": {
+      "heading": "Benvido a crowdvigo",
+      "lead1": "Democratizar o acceso a oportunidades de investimento con alto potencial de rendibilidade, conectando proxectos innovadores cunha comunidade de investidores comprometidos.",
+      "lead2": "Somos unha plataforma tecnolóxica e innovadora onde emprendedores e financiadotes conflúen para presentar, apoiar e facer crecer xuntos os seus proxectos. Aquí, cada idea atopa a súa audiencia, e cada investimento impulsa o éxito compartido."
+    },
+    "callToAction": {
+      "registerButton": "Rexístrate"
+    },
+    "about": {
+      "heading": "Somos crowdfunding",
+      "body": "Somos Provedores de Servizos de Financiamento Participativo autorizado pola Comisión Nacional do Mercado de Valores (CNMV), con proposta favorable do Banco de España, inscrito co número de rexistro 9. Somos transparentes e traballamos co mellor interese para os nosos clientes. Por favor, antes de investir, infórmate dos riscos e le a Información Básica para o Cliente Inversor, así como o período de reflexión precontractual para investidores non experimentados. Consulta os informes financeiros aquí."
+    },
+    "statistics": {
+      "averageReturn": {
+        "label": "Rendibilidade media",
+        "value": "14,6 %"
+      },
+      "totalFunded": {
+        "label": "Financiado",
+        "value": "55 M€"
+      },
+      "averageTerm": {
+        "label": "Prazo medio",
+        "value": "3 meses"
+      },
+      "defaultRate": {
+        "label": "Taxa de impago",
+        "value": "0 %"
+      },
+      "successRate": {
+        "label": "Porcentaxe de éxito",
+        "value": "85 %"
+      }
+    },
+    "opportunities": {
+      "heading": "Oportunidades de investimento"
+    },
+    "tariffs": {
+      "heading": "As nosas tarifas",
+      "lead1": "Transparencia total: aquí atoparás exactamente o que pagarás… e o que non!",
+      "lead2": "Para ti, como investidor, é 100 % GRATIS. Non cobramos nada por apoiar os proxectos que che inspiran.",
+      "investor": "A investidores",
+      "promoter": "A promotores",
+      "footnote": "Sen letra miúda, sen sorpresas. Así de sinxelo: investe ao teu ritmo e deixa que nos encarguemos do resto."
+    },
+    "commitment": {
+      "heading": "O noso compromiso contigo",
+      "body": "Na nosa plataforma, comprometémonos a ofrecerche a mellor experiencia de investimento posible. Traballamos arduamente para garantir a transparencia e a seguridade en todas as transaccións.",
+      "button": "Quero saber máis"
     }
+  },
+  "projectCard": {
+    "financedLabel": "financiado {percent}%",
+    "goalLabel": "Obxectivo"
+  },
+  "footer": {
+    "brand": "crowdvigo",
+    "description": "Conectamos proxectos innovadores con investidores comprometidos. Transparencia, seguridade e compromiso en cada investimento.",
+    "usefulLinksTitle": "Ligazóns útiles",
+    "links": {
+      "home": "Inicio",
+      "projects": "Proxectos",
+      "tariffs": "Tarifas",
+      "contact": "Contacto"
+    },
+    "contactTitle": "Contacto",
+    "emailLabel": "Correo electrónico",
+    "email": "contacto@crowdvigo.com",
+    "phoneLabel": "Tel",
+    "phone": "+34 123 456 789",
+    "copyright": "© 2025 crowdvigo. Todos os dereitos reservados."
+  }
 }

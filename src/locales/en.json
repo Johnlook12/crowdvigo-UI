@@ -1,10 +1,85 @@
 {
-    "login":{
-        "title": "Login",
-        "username": "Username",
-        "password": "Password",
-        "loginButton": "Login",
-        "forgotPassword": "Forgot your password?",
-        "register": "Register"
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "forgotPassword": "Forgot your password?",
+    "rememberMe": "Remember me",
+    "register": "Register",
+    "noAccount": "Don't have an account?"
+  },
+  "home": {
+    "welcome": {
+      "heading": "Welcome to crowdvigo",
+      "lead1": "Democratize access to high-potential investment opportunities by connecting innovative projects with a community of committed investors.",
+      "lead2": "We are a technological and innovative platform where entrepreneurs and funders converge to present, support, and grow their projects together. Here, every idea finds its audience, and every investment drives shared success."
+    },
+    "callToAction": {
+      "registerButton": "Register"
+    },
+    "about": {
+      "heading": "We are crowdfunding",
+      "body": "We are a Crowdfunding Service Provider authorized by the National Securities Market Commission (CNMV), with a favorable proposal from the Bank of Spain, registered under number 9. We are transparent and work in the best interest of our clients. Please, before investing, inform yourself of the risks and read the Basic Information for Investors, as well as the pre-contractual reflection period for inexperienced investors. Check the financial reports here."
+    },
+    "statistics": {
+      "averageReturn": {
+        "label": "Average return",
+        "value": "14.6 %"
+      },
+      "totalFunded": {
+        "label": "Funded",
+        "value": "€55 M"
+      },
+      "averageTerm": {
+        "label": "Average term",
+        "value": "3 months"
+      },
+      "defaultRate": {
+        "label": "Default rate",
+        "value": "0 %"
+      },
+      "successRate": {
+        "label": "Success rate",
+        "value": "85 %"
+      }
+    },
+    "opportunities": {
+      "heading": "Investment opportunities"
+    },
+    "tariffs": {
+      "heading": "Our fees",
+      "lead1": "Total transparency: here you’ll find exactly what you’ll pay… and what you won’t!",
+      "lead2": "For you as an investor, it’s 100 % FREE. We don’t charge anything for supporting the projects that inspire you.",
+      "investor": "For investors",
+      "promoter": "For promoters",
+      "footnote": "No small print, no surprises. It’s that simple: invest at your own pace and let us handle the rest."
+    },
+    "commitment": {
+      "heading": "Our commitment to you",
+      "body": "On our platform, we are committed to providing you with the best possible investment experience. We work tirelessly to ensure transparency and security in all transactions.",
+      "button": "Learn more"
     }
+  },
+  "projectCard": {
+    "financedLabel": "funded {percent}%",
+    "goalLabel": "Goal"
+  },
+  "footer": {
+    "brand": "crowdvigo",
+    "description": "We connect innovative projects with committed investors. Transparency, security, and dedication in every investment.",
+    "usefulLinksTitle": "Useful links",
+    "links": {
+      "home": "Home",
+      "projects": "Projects",
+      "tariffs": "Fees",
+      "contact": "Contact"
+    },
+    "contactTitle": "Contact",
+    "emailLabel": "Email",
+    "email": "contact@crowdvigo.com",
+    "phoneLabel": "Phone",
+    "phone": "+34 123 456 789",
+    "copyright": "© 2025 crowdvigo. All rights reserved."
+  }
 }

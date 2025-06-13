@@ -5,11 +5,11 @@
             <span class="text-2xl block py-5">{{ props.project.title }}</span>
             <div class="flex flex-row justify-between">
                 <div class="flex flex-col">
-                    <span class="text-gray-400">financiado 0,00%</span>
+                    <span class="text-gray-400">{{ $t("projectCard.financedLabel", { percent: props.project.currentAmount / props.project.goal * 100 }) }}</span>
                     <span class="text-xl font-semibold text-[#001136]">{{ props.project.currentAmount }}€</span>
                 </div>
                 <div class="flex flex-col">
-                    <p class="text-gray-400">Objetivo</p>
+                    <p class="text-gray-400">{{ $t("projectCard.goalLabel") }}</p>
                     <span class="text-xl font-semibold text-[#001136]">{{ props.project.goal }}€</span>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 <template>
     <div class="container mx-auto px-6 flex flex-col justify-center items-center">
             <h1 class="text-3xl font-semibold mb-6 text-center">Crear cuenta nueva</h1>
-            <span>{{ error }}</span>
             <form @submit.prevent="handleSingup" class="px-80 mt-5 space-y-6">
                 <div class="flex flex-row justify-between items-center ">
                     <div class="">
@@ -58,12 +57,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useAuthStore } from "../../store/AuthStore";
-import { storeToRefs } from "pinia";
+import { useRouter } from "vue-router";
 
 const authStore = useAuthStore();
 
-const { error } = storeToRefs(authStore);
 
+const router = useRouter();
 const name = ref("");
 const lastName = ref("");
 const username = ref("");
@@ -73,12 +72,13 @@ const password = ref("");
 const confirmPassword = ref("");
 
 const handleSingup = async () => {
+
     if (password.value !== confirmPassword.value) {
         alert("Las contraseñas no coinciden");
         return;
     }
 
-    await authStore.register({
+    const success = await authStore.register({
         firstName: name.value,
         lastName: lastName.value,
         email: email.value,
@@ -86,6 +86,13 @@ const handleSingup = async () => {
         phone: phone.value,
         password: password.value,
     });
+
+    if (success) {
+        alert("Cuenta creada con éxito");
+        router.push("/auth/login");
+    } else {
+        alert("Error al crear la cuenta. Por favor, inténtalo de nuevo.");
+    }
 };
 
 </script>

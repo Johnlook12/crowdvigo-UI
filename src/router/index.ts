@@ -1,9 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AuthenticationView from '../views/AuthenticationView.vue'
+import PrivateAreaView from '../views/PrivateAreaView.vue'
 import LoginForm from '../components/LoginForm/LoginForm.vue'
 import RegisterForm from '../components/RegisterForm/RegisterForm.vue'
 import { useAuthStore } from '../store/AuthStore'
+import ProjectView from '../views/ProjectView.vue'
+import ProjectDetail from '../components/ProjectDetail/ProjectDetail.vue'
 
 const routes = [
     {
@@ -28,6 +31,28 @@ const routes = [
                 path: 'register',
                 name: 'register',
                 component: RegisterForm
+            }
+        ]
+    },
+    {
+        path: '/private',
+        name: 'private',
+        component: PrivateAreaView,
+        meta: {
+            hideLayout: true,
+            requiresAuth: true
+        },
+        children:[
+            {
+                path: 'opportunities',
+                name: 'opportunities',
+                component: ProjectView
+            },
+            {
+                path: 'details/:id',
+                name: 'project-details',
+                component: ProjectDetail,
+                props: true
             }
         ]
     }

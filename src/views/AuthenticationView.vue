@@ -25,7 +25,6 @@
 
 <script setup lang="ts">
 import { ChevronLeftIcon } from '@heroicons/vue/20/solid';
-import LoginForm from '../components/LoginForm/LoginForm.vue';
 </script>
 
 <style lang="scss" scoped></style>

@@ -20,6 +20,11 @@
                         class="border border-gray-300 rounded-xl p-2 w-full" />
                 </div>
                 <div>
+                    <label for="companyName" class="block text-sm font-medium mb-1">Nombre de la empresa</label>
+                    <input type="text" id="companyName" v-model="companyName"
+                        class="border border-gray-300 rounded-xl p-2 w-full" placeholder="(opcional)" />
+                </div>
+                <div>
                     <label for="email" class="block text-sm font-medium mb-1">Email</label>
                     <input type="text" id="email" v-model="email" required
                         class="border border-gray-300 rounded-xl p-2 w-full" />
@@ -70,6 +75,7 @@ const email = ref("");
 const phone = ref("");
 const password = ref("");
 const confirmPassword = ref("");
+const companyName = ref("");
 
 const handleSingup = async () => {
 
@@ -83,6 +89,7 @@ const handleSingup = async () => {
         lastName: lastName.value,
         email: email.value,
         username: username.value.toLowerCase(),
+        companyName: companyName.value,
         phone: phone.value,
         password: password.value,
     });

@@ -86,7 +86,7 @@
 
 <script setup lang="ts">
 import ProjectCard from '../components/ProjectCard/ProjectCard.vue';
-import Footer from '../components/Footer/Footer.vue';
+import type { Project } from '../components/ProjectCard/type';
 import { ref } from 'vue';
 
 const project = ref<Project>({
@@ -94,7 +94,7 @@ const project = ref<Project>({
     title: 'Proyecto de ejemplo',
     description: 'Descripción del proyecto de ejemplo',
     category: 'Tecnología',
-    goal: 100000,
+    fundingGoal: 100000,
     currentAmount: 50000,
     startDate: '2023-01-01',
     endDate: '2023-12-31'

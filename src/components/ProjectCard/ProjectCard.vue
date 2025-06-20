@@ -4,7 +4,7 @@
             :class="{ 
                 'hover:shadow-2xl hover:scale-105 cursor-pointer!': !props.disableHover, 
                 'shadow-lg': props.border}">
-            <img v-if="showImage" class="w-auto rounded-t-2xl" :src="mainImage" alt="">
+            <img v-if="showImage" class="w-auto rounded-t-2xl custom-image" :src="mainImage" alt="">
             <div class="px-2">
                 <span class="text-2xl block py-5">{{ props.project.title }}</span>
                 <div class="flex flex-row justify-between">
@@ -38,7 +38,7 @@ const projectStore = useProjectStore();
 const { imagesByProject } = storeToRefs(projectStore);
 
 const mainImage = computed(() => {
-    const imgs = imagesByProject.value[props.project.id] || [];
+    const imgs = imagesByProject.value[props.project.id ?? 0] || [];
     return imgs.length
         ? imgs[0].url
         : '/img/default-project-image.png';
@@ -62,7 +62,7 @@ const formattedPercent = computed(() => {
 })
 
 const loadImages = async () => {
-    await projectStore.fetchProjectImages(props.project.id);
+    await projectStore.fetchProjectImages(props.project.id ?? 0);
 }
 
 onMounted(() => {
@@ -85,4 +85,10 @@ const progressBarColor = computed(() => {
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.custom-image {
+    object-fit: cover;
+    height: 350px;
+    width: 100%;
+}
+</style>

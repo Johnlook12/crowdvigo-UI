@@ -33,45 +33,9 @@
                     Updates</li>
             </ul>
         </div>
-        <div v-if="selectedDescrtiption" class="mt-10 w-200">
+        <div v-if="selectedDescrtiption" class="mt-10 w-200 ql-editor">
             <h2 class="text-3xl font-semibold">Descripción</h2>
-            <div class="text-lg text-gray-600 mt-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati molestiae eius perferendis, atque
-                    culpa ad deserunt autem, dolor natus perspiciatis laboriosam inventore sed assumenda suscipit
-                    impedit nemo quam labore ipsam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati molestiae eius perferendis, atque
-                    culpa ad deserunt autem, dolor natus perspiciatis laboriosam inventore sed assumenda suscipit
-                    impedit nemo quam labore ipsam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum ab maiores provident temporibus
-                    laudantium accusamus. Animi natus, officia voluptas quos reprehenderit nihil labore velit non
-                    consequatur tempore sapiente odit.</p>
+            <div class="text-lg text-gray-600 mt-4" v-html="htmlDescription">
             </div>
         </div>
         <div v-if="selectedUpdates" class="space-y-10 mt-10">
@@ -109,6 +73,7 @@ const route = useRoute();
 const projectId = route.params.id;
 const project = ref<Project | null>(null);
 const updates = ref<ProjectUpdate[]>([]);
+const htmlDescription = computed(() => (project.value?.description || ''));
 
 const selectedDescrtiption = ref<boolean>(true);
 const selectedUpdates = ref<boolean>(false);

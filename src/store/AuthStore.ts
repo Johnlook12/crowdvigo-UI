@@ -6,11 +6,15 @@ import api from "../api/index";
 
 export const useAuthStore = defineStore("auth", () => {
     const error = ref<Error | null>(null);
-    const currentUser = ref<User | null>(null);
+    const currentUser = ref<User | null>(
+        localStorage.getItem('user')
+            ? JSON.parse(localStorage.getItem('user')!)
+            : null
+    );
     const isAuthenticated = ref<boolean>(false);
     const token = ref<string | null>(localStorage.getItem('token') || null);
 
-    if(token.value) {
+    if (token.value) {
         currentUser.value = JSON.parse(localStorage.getItem('user') || 'null');
         isAuthenticated.value = true;
     }
@@ -42,6 +46,7 @@ export const useAuthStore = defineStore("auth", () => {
                 username: data.username,
                 email: data.email,
                 phone: data.phone,
+                typeUser: data.typeUser
             }
             isAuthenticated.value = true;
             if (token.value !== null) {

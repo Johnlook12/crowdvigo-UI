@@ -1,12 +1,12 @@
 interface Project{
-    id: number;
+    id?: number;
     title: string;
     description: string;
-    category: string;
     fundingGoal: number;
-    currentAmount: number;
-    startDate: string;
-    endDate: string;
+    currentAmount?: number;
+    startDate?: string;
+    endDate?: string;
+    status: 'active' | 'pending' | 'completed';
     userId: number;
 }
 

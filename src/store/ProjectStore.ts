@@ -16,6 +16,41 @@ export const useProjectStore = defineStore("project", () => {
 
     const imagesByProject = ref<Record<number, ProjectImage[]>>({});
 
+    const createProject = (project: Project) => {
+        return api.post('/project', project)
+            .then(response => {
+                const newProject = response.data;
+                projects.value.push(newProject);
+                return newProject;
+            })
+            .catch(err => {
+                error.value = err;
+                console.error('Error creating project:', err);
+                throw err;
+            });
+    }
+
+    const createProjectImages = ( projectId: number, files: File[]) => {
+        const formData = new FormData();
+        files.forEach(file => formData.append('files', file));
+
+        return api.post(`/projects/${projectId}/images`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+            .then(response => {
+                const images = response.data;
+                imagesByProject.value[projectId] = images;
+                return images;
+            })
+            .catch(err => {
+                error.value = err;
+                console.error(`Error uploading images for project ${projectId}:`, err);
+                throw err;
+            });
+    }
+
     const fetchProjects = async (p: number = page.value, s: number = size.value, sortBy: string = sort.value) => {
         try {
             const response = await api.get('/project', {
@@ -51,6 +86,18 @@ export const useProjectStore = defineStore("project", () => {
         }
     }
 
+    const findByUserId = async (userId: number) => {
+        try {
+            const response = await api.get<Project[]>(`/project/user/${userId}`);
+            console.log(`Projects for user ${userId}:`, response.data);
+            return response.data;
+        } catch (err: any) {
+            error.value = err;
+            console.error(`Error fetching projects for user ${userId}:`, err);
+            throw err;
+        }
+    }
+
     async function fetchProjectImages(projectId: number) {
         try {
             const res = await api.get<ProjectImage[]>(`/projects/${projectId}/images`);
@@ -79,6 +126,23 @@ export const useProjectStore = defineStore("project", () => {
         } catch (err: any) {
             error.value = err;
             console.error(`Error fetching rewards for project ${projectId}:`, err);
+            throw err;
+        }
+    }
+
+    const updateProject = async (project: Project) => {
+        try {
+            const response = await api.put(`/project/${project.id}`, project);
+            const updatedProject = response.data;
+            const index = projects.value.findIndex(p => p.id === updatedProject.id);
+            if (index !== -1) {
+                projects.value[index] = updatedProject;
+            }
+            return updatedProject;
+        }
+        catch (err: any) {
+            error.value = err;
+            console.error(`Error updating project with id ${project.id}:`, err);
             throw err;
         }
     }
@@ -117,9 +181,13 @@ export const useProjectStore = defineStore("project", () => {
         //actions
         fetchProjects,
         findById,
+        createProject,
+        createProjectImages,
         fetchProjectImages,
         findProjectUpdates,
         findProjectRewards,
+        findByUserId,
+        updateProject,
         goToPage,
         nextPage,
         prevPage,

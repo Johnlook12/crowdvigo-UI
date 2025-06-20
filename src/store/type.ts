@@ -17,6 +17,7 @@ interface User {
     email: string;
     password?: string;
     phone: string;
+    typeUser: string
 }
 
 interface Contribution{

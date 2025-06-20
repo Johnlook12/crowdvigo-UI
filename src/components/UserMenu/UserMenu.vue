@@ -21,6 +21,11 @@
                             </router-link>
                             </MenuItem>
                             <MenuItem>
+                            <router-link to="/administration">
+                                <button class="w-full text-left px-4 py-2 hover:bg-gray-100">Administración</button>
+                            </router-link>
+                            </MenuItem>
+                            <MenuItem>
                             <button class="w-full text-left px-4 py-2 hover:bg-gray-100" @click="auth.logout">Cerrar
                                 sesión</button>
                             </MenuItem>
